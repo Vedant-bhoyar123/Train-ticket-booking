@@ -1,0 +1,222 @@
+class Train:
+    name = " Nagpur to Pune Intercity Express"  # nagpur to pune  1.nagpur 2.wardha 3.shegaon 4. ahamdanagar 5.pune
+    train_no = 45680
+    available_seats = 100
+    n_p_fare = 500
+    n_a_fare = 400
+    n_s_fare = 300
+    n_w_fare = 200
+    w_p_fare = 400
+    w_a_fare = 300
+    w_s_fare = 200
+    s_p_fare = 300
+    s_a_fare = 200
+    a_p_fare = 150
+    l_seat_no = list(range(1, 101))
+
+    def __init__(self):
+        print(" ! Welcome to the Indian Railway ! \n")
+
+    def StatusInfo(self, start, end):
+        self.start = start
+        self.end = end
+        print("**********************************************************")
+        if (self.start == "nagpur" and self.end == "pune"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.n_p_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+            a1 = 1
+        elif (self.start == "nagpur" and self.end == "ahamadnagar"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.n_a_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+            b = 1
+        elif (self.start == "nagpur" and self.end == "shegaon"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.n_s_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+
+        elif (self.start == "nagpur" and self.end == "wardha"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.n_w_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+            d = 1
+        elif (self.start == "wardha" and self.end == "pune"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.w_p_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+            e = 1
+
+        elif (self.start == "wardha" and self.end == "ahamadnagar"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.w_a_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+            f = 1
+
+        elif (self.start == "wardha" and self.end == "shegaon"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.w_s_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+            g = 1
+
+        elif (self.start == "shegaon" and self.end == "pune"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.s_p_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+            h = 1
+
+        elif (self.start == "shegaon" and self.end == "ahamadnagar"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.s_a_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+            i = 1
+
+        elif (self.start == "ahamadnagar" and self.end == "pune"):
+            print(f"1)Name of Train :{self.name}")
+            print(f"2)Train no. : {self.train_no} ")
+            print(f"3)total no of seats : {self.available_seats}")
+            print(f"4)Destination : {self.start} to {self.end}")
+            print(f"5)Total fare for Travelling : Rs.{self.a_p_fare} \n")
+            print(f"6)available seats no. :{self.available_seats}\n")
+            j = 1
+
+        else:
+            print("!Not Available")
+        print("**********************************************************")
+
+    def Book_tickets(self, no_of_seats, name_abrrivation, passenger_name, j_start,
+                     j_end):  # name_abbrivation: Mr.,Mrs.,Miss
+        self.no_of_seats = no_of_seats
+        self.passenger_name = passenger_name
+        self.name_abrrivation = name_abrrivation
+        self.j_start = j_start
+        self.j_end = j_end
+        print("**********************************************************")
+        if (
+                (j_start == "nagpur" and j_end == "pune") or (j_start == "nagpur" and j_end == "ahamadnagar") or
+                (j_start == "nagpur" and j_end == "shegaon") or (j_start == "nagpur" and j_end == "wardha") or
+                (j_start == "wardha" and j_end == "pune") or (j_start == "wardha" and j_end == "ahamadnagar") or
+                (j_start == "wardha" and j_end == "shegaon") or (j_start == "shegaon" and j_end == "pune") or
+                (j_start == "shegaon" and j_end == "ahamadnagar") or (j_start == "ahamadnagar" and j_end == "pune")
+        ):
+            if (self.available_seats > 0):
+                print(
+                    f"Confirmation : {self.no_of_seats} Tickets is booked by {self.name_abrrivation} {self.passenger_name} for journy of {self.j_start} to {self.j_end}!\n")
+                self.available_seats = self.available_seats - no_of_seats
+                for i in range(self.no_of_seats):
+                    a = self.l_seat_no.pop(i)
+                    print("seat no. are alloted", a)
+                print("available seats no: ", self.l_seat_no)
+                print("available seats:", self.available_seats)
+
+            else:
+                print(" sorry! tickets are are full ,try for tatkal\n")
+        else:
+            print("!!journy is not available!!")
+        print("**********************************************************")
+
+    def Ticket_cancellation(self, no_of_Tickets, name_abbr, Pass_name, *cancelled_seat_no):  # name_abbr:Mr.,Mrs.,Miss
+        self.no_of_Tickets = no_of_Tickets
+        self.Pass_name = Pass_name
+        self.name_abbr = name_abbr
+        self.cancelled_seat_no = cancelled_seat_no
+        k, c = 0, 0
+        print("**********************************************************")
+        if (self.available_seats < 100) and (len(self.cancelled_seat_no) == self.no_of_Tickets):
+            a = list(cancelled_seat_no)
+            for j, i in zip(cancelled_seat_no, range(len(a))):
+                if (j not in self.l_seat_no) and (j in range(11)) and (a[i] not in self.l_seat_no):
+                    k = 2
+                    c += 1
+                    self.l_seat_no.append(j)
+                    self.available_seats = self.available_seats + 1
+        if k == 2:
+            # self.l_seat_no.append(j)
+            #         self.available_seats = self.available_seats + no_of_Tickets
+            print(self.l_seat_no, "\n")
+            print(f"---$Tickets Cancellation: {c} Tickets are cancelled  by {self.name_abbr} {self.Pass_name}\n")
+        else:
+            print("!Invalid Operation!")
+        print("**********************************************************")
+
+
+# Train stops :-nagpur ,wardha,shegaon,ahamadnagar,pune
+# StatusInfo(start,end)
+# def Book_tickets(self, no_of_seats, name_abrrivation, passenger_name,j_start,j_end,*seat_no):  # name_abbrivation: Mr.,Mrs.,Miss
+# def Ticket_cancellation(self, no_of_Tickets, name_abbr, Pass_name,*cancelled_seat_no):  # name_abbr:Mr.,Mrs.,Miss
+# vedant=Train()  # DEFINING CLASS
+vedant = Train()
+while True:
+    operation = input("""
+                    1 StatusInfo
+                    2 Book_tickets
+                    3 Ticket_cancellation
+                    4 Exit
+                    """)
+    if operation == "1":
+        j_start = input("Enter the starting journy place:-")  # use lower case
+        j_end = input("Enter the starting journy place:-")
+        vedant.StatusInfo(j_start, j_end)
+    elif operation == "2":
+        no_ticket = int(input("enter the no of tickets"))
+        for i in range(no_ticket):
+            Name_abbr = input("Enter the name abbrivation(ex.Mr.,Miss,Mrs.):-")
+            Name = input("Enter the Passenger name:-")
+            j_start = input("Enter the starting journy place:-")  # use lower case
+            j_end = input("Enter the starting journy place:-")
+            vedant.Book_tickets(1, Name_abbr, Name, j_start, j_end)
+    elif operation == "3":
+        # l2=[]
+        no_ticket = int(input("enter the no of tickets"))
+        # Name_abbr=input("Enter the name abbrivation(ex.Mr.,Miss,Mrs.):-")
+        # Name=input("Enter the Passenger name:-")
+        for i in range(no_ticket):
+            Name_abbr = input("Enter the name abbrivation(ex.Mr.,Miss,Mrs.):-")
+            Name = input("Enter the Passenger name:-")
+            Ticket_no = int(input("Enter Ticket No:"))
+            # l2.apppend(Ticket_no)
+            vedant.Ticket_cancellation(1, Name_abbr, Name, Ticket_no)
+    elif operation == "4":
+        break
+    else:
+        print("!!Wrong Choice")
+
+
+
+
+
+
+
+
+
+
+
+
+
